@@ -4,12 +4,15 @@ public class Main {
 
     public static void main(String[] args) {
         for (int n = 100; n <= 1_000_000; n *= 10) {
+//        for (int n = 10; n <= 10; n *= 10) {
             int[] array = generateArray(n);
 
             Sort sort = new SelectionSort(array);
+            sort.enableLogging();
             process(sort, "Selection sort");
 
             sort = new HeapSort(array);
+            sort.enableLogging();
             process(sort, "Heap sort");
 
             System.out.println();

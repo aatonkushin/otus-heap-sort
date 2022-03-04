@@ -3,6 +3,7 @@ package org.tonkushin;
 public interface Sort {
     void sort();
     int[] getArray();
+    void enableLogging();
 
     /**
      * Проверяет отсортированный массив
